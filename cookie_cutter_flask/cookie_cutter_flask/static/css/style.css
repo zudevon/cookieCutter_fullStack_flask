@@ -1,0 +1,130 @@
+/* =============================================================================
+   App specific CSS file.
+   ========================================================================== */
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+  color:darkblue;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: horizontal;
+}
+
+.container-narrow{
+  margin: 0 auto;
+
+}
+
+/* Forms */
+
+.navbar-form input[type="text"],
+.navbar-form input[type="password"] {
+  width: 180px;
+}
+
+
+.form-register {
+  width: 50%;
+}
+
+.form-register .form-control {
+  position: center;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* footer */
+/* notes */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #ff6500;
+  color: #999999;
+}
+
+footer a {
+  font-size: 32px;
+  color: darkblue;
+}
+
+footer p {
+  float: right;
+  margin-right: 25px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+footer .company {
+  float: left;
+  margin-left: 25px;
+}
+
+footer .footer-nav {
+  float: right;
+  margin-right: 25px;
+  list-style: none;
+}
+
+.pretty_img{
+  width: 400px;
+  height: 400px;
+  margin: 10px;
+
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.profilePicture{
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+
+.page-title {
+  text-align: center;
+  font-weight: 100;
+}
+
+.me-page{
+  padding-top: 100px;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.profileNav {
+  background-color: lightblue;
+  max-width: 40%;
+  min-width: 540px;
+  flex: 2;
+}
+
+.profileNav h1 {
+  padding-left: 20px;
+}

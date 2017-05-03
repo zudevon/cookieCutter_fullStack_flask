@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+{% block content %}
+
+    <body>
+    <div class="container me-page">
+        <h1>Welcome {{ current_user.username }}!</h1>
+    </div>
+
+    <canvas>
+
+    </canvas>
+
+
+
+
+
+
+        <div class="profileNav">
+            <form id="imageForm" class="form form-register" method="POST" action="" role="form" enctype=multipart/form-data>
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                    <div class="form-group">
+                    {{form.image.label}}
+                    {{form.image(class_="form-control")}}
+                    </div>
+                <p><input class="btn btn-default btn-submit" type="submit" value="Submit"></p>
+            </form>
+          <div>
+              <div class="container">
+                <h1>{{ current_user.username }}</h1>
+                  <div class="gallery">
+                    {% for i in user_pictures %}
+                        <img class="pretty_img" src="{{ i }}">
+                    {% endfor %}
+                  </div>
+
+            <h1>^^Profile pic here^^</h1>
+
+            <h3> Your Bio:</h3>
+                <form action="/action_page.php">
+                  BIO: <input class="" type="text" name="bio"><br>
+              <input class="btn btn-sm btn-default" type="submit" value="Submit Bio">
+
+                </form>
+              <div class="container">
+                <button type="button" class="btn btn-primary">Edit Bio</button>
+              </div>
+
+          </div>
+      </div>
+
+
+    <br>
+    <br/>
+
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">click 1</a></li>
+                <li><a href="#">click 2</a></li>
+                <li><a href="#">click 3</a></li>
+            </ul>
+    </div>
+
+    <br>
+    <br/>
+
+    <div>
+
+    </div>
+    </body>
+{% endblock %}

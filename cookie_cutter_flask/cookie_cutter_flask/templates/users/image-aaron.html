@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="page-title">
+        <title>Image</title>
+            <h1>Upload Pictures</h1>
+
+        <form id="imageForm" class="form form-register page-title image-create-form" method="POST" action="" role="form" enctype=multipart/form-data>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <div class="form-group">
+            {{form.image.label}}
+            {{form.image(class_="form-control")}}
+            </div>
+        <p><input class="btn btn-default btn-submit" type="submit" value="Submit"></p>
+        </form>
+
+    </div>
+
+    <div class="container">
+            <h1>Pictures in usr_images</h1>
+            <div class="gallery" style="background-color:black;">
+
+                {% for i in img_forms %}
+                    <img class="pretty_img" src="{{ i.image_url.data }}">
+                    <div class="center">
+                        <form id="{{ i.image_url.data }}" class="form image-delete-form" method="POST" action="" role="form">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                            <p><input class="btn btn-default btn-submit" type="submit" value="Delete"></p>
+                        </form>
+                    </div>
+                {% endfor %}
+
+            </div>
+    </div>
+
+
+{% endblock %}
